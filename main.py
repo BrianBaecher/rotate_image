@@ -30,7 +30,6 @@ def rotate_image():
             file_path = os.path.join(folder_path, file_name)
             try:
                 with Image.open(file_path) as image:
-                    print(image.size)
                     rotated_image = image.rotate(degree_change, expand=True)
                     rotated_image.save(file_path)
             except Exception as e:
